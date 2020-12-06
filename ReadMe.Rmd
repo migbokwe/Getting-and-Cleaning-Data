@@ -1,0 +1,69 @@
+---
+title: "ReadMe"
+output: html_notebook
+---
+
+This repository contains four files prepared in partial fulfilment for the requirements of the Getting and Cleaning Data Course Project. 
+
+# Data Provinence   
+
+==================================================================
+Human Activity Recognition Using Smartphones Dataset
+Version 1.0
+==================================================================
+
+The data for this experiment relate to measurement of physical activities using an accelerometer and gyroscope built into a smart phone device. A group of 30 volunteers aged 18-49 years person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) while wearing the device on their waist. The resulting measurements are divided into two sets; data from 70% of volunteers make up the training data and data from the remaining 30% constitute the test data. 
+
+The test and training data are contained in separate folders. Within each of the folders, the files labeled 'X_' contain the activity data and the files labeled 'y_' contain the numeric activity code. The individual identifiers are contained in the 'subject_' file. The 'X_', 'y_' and 'subject' files within each of the test and train folders contain the same number of observations and be matched according to row position without changing the order of presentation.
+
+=======================================================================
+The following variable description is copied directly from source files:
+
+The activity data files contain variables related to:
+- Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
+- Triaxial Angular velocity from the gyroscope. 
+- A 561-feature vector with time and frequency domain variables. 
+
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+=======================================================================
+
+Source: Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
+
+This dataset was distributed AS-IS and no responsibility implied or explicit can be addressed to the authors or their institutions for its use or misuse. Any commercial use is prohibited.
+
+=======================================================================
+
+# Description of Repository Files
+
+1. ReadMe.md: This document outlines the contents of the repository and describes how each of the files are linked and can be used to obtain and tidy the data used for the project.  
+
+2. CodeBook.md: This document provides a list of the variables in the tidy dataset. 
+
+3. run_analysis.R: This is the script file used to obtain, tidy and summarise data.  
+
+4. tidy_data.txt: This text file contains the summary of the tidy data.  
+
+# Running R Script 
+The r script 'run_analysis.R' is written to be run sequentially from top to bottom. The comments inside the code describe the step-by-step process used to obtain and tidy the data. Sample code is provided below as well as within the script to read in the final tidy file for review. This code may need to be modified to align with local directory.
+
+
+#sample code to read .txt file
+tidy_data <- read.table( "./summary_test_train.txt", header = TRUE)
+
+
+
+
+
+```{r}
+
+
+
+
+```
